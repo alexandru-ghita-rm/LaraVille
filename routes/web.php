@@ -1,7 +1,10 @@
 <?php
 
-use App\Models\Post;
-use Illuminate\Support\Facades\File;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\RegisterController;
+use App\Models\Ad;
+use App\Models\Category;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,18 +18,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    $posts = Post::all();
+Route::get('/', [\App\Http\Controllers\AdController::class, 'index'])->name('home');
 
-    return view('posts', [
-        'posts' => $posts
+Route::get('ads/{ad:slug}', [\App\Http\Controllers\PropertyController::class, 'show'])->name('property');
+
+Route::get('categories/{category:slug}', [\App\Http\Controllers\CategoryController::class, 'index'])->name('category');
+
+Route::get('sellers/{seller:username}', function (User $seller) {
+    return view('ads', [
+        'ads' => $seller->ads,
+        'categories' => Category::all()
     ]);
 });
 
-Route::get('posts/{post}', function ($slug) {
+Route::get('about', [AboutController::class, 'index'])->name('about');
+Route::get('sign-up', [RegisterController::class, 'index'])->name('register');
+Route::post('sign-up', [RegisterController::class, 'store']);
 
-    return view('post', [
-        'post' => Post::find($slug)
-    ]);
-
-})->where('post', '[A-z_\-]+');

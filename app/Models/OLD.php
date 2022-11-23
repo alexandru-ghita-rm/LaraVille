@@ -6,12 +6,12 @@ use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Support\Facades\File;
 use Spatie\YamlFrontMatter\YamlFrontMatter;
 
-class Post
+class OLD
 {
 
     public $title;
 
-    public $excerpt;
+    public $summary;
 
     public $date;
 
@@ -19,11 +19,11 @@ class Post
 
     public $slug;
 
-    public function __construct($title, $excerpt, $date, $body, $slug)
+    public function __construct($title, $summary, $date, $body, $slug)
 
     {
         $this->title = $title;
-        $this->excerpt = $excerpt;
+        $this->summary = $summary;
         $this->date = $date;
         $this->body = $body;
         $this->slug = $slug;
@@ -31,12 +31,12 @@ class Post
 
     public static function all()
     {
-        return cache()->rememberForever('posts.all', function () {
-            return collect(File::files(resource_path("posts")))
+        return cache()->rememberForever('ads.all', function () {
+            return collect(File::files(resource_path("ads")))
                 ->map(fn($file) => yamlFrontMatter::parseFile($file))
-                ->map(fn($document) => new Post(
+                ->map(fn($document) => new OLD(
                     $document->title,
-                    $document->excerpt,
+                    $document->summary,
                     $document->date,
                     $document->body(),
                     $document->slug
