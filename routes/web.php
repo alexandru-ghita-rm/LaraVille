@@ -1,6 +1,10 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\AdController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\RegisterController;
 use App\Models\Ad;
 use App\Models\Category;
@@ -18,11 +22,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [\App\Http\Controllers\AdController::class, 'index'])->name('home');
+Route::get('/', [AdController::class, 'index'])->name('home');
 
-Route::get('ads/{ad:slug}', [\App\Http\Controllers\PropertyController::class, 'show'])->name('property');
+Route::get('ads/{ad:slug}', [PropertyController::class, 'show'])->name('property');
 
-Route::get('categories/{category:slug}', [\App\Http\Controllers\CategoryController::class, 'index'])->name('category');
+Route::get('categories/{category:slug}', [CategoryController::class, 'index'])->name('category');
 
 Route::get('sellers/{seller:username}', function (User $seller) {
     return view('ads', [
@@ -34,4 +38,5 @@ Route::get('sellers/{seller:username}', function (User $seller) {
 Route::get('about', [AboutController::class, 'index'])->name('about');
 Route::get('sign-up', [RegisterController::class, 'index'])->name('register');
 Route::post('sign-up', [RegisterController::class, 'store']);
+Route::get('dashboard', [DashboardController::class, 'index'])->name('my-account');
 

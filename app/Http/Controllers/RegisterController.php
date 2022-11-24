@@ -33,9 +33,11 @@ class RegisterController
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
-        // sign the user in
 
-        return redirect()->route('home');
+
+        auth()->attempt($request->only('email', 'password'));
+
+        return redirect()->route('my-account');
     }
 }
 
