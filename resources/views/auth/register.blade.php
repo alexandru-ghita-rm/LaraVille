@@ -60,7 +60,7 @@
             </div>
             <div class="mb-4">
                 <button type="submit"
-                        class="bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 text-white px-4 py-4 rounded-lg font-medium w-full">
+                        class="bg-gray-700 hover:bg-gray-800 focus:bg-gray-800 text-white px-4 py-4 rounded-lg font-medium w-full">
                     Register
                 </button>
             </div>

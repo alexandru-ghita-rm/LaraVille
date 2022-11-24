@@ -7,10 +7,10 @@
             <header class="mt-8 lg:mt-0 px-5">
                 <div class="space-x-2 pt-5">
                     <span href="#"
-                          class="px-3 py-1 border bg-pink-300 border-pink-300 rounded-full text-white text-xs uppercase font-semibold"
+                          class="px-3 py-1 border bg-green-500 border-green-500 rounded-full text-white text-xs uppercase font-semibold"
                           style="font-size: 10px">LATEST AD</span>
                     <a href="/categories/{{ $ad->category->slug }}"
-                       class="px-3 py-1 border border-pink-300 rounded-full text-pink-300 text-xs uppercase font-semibold"
+                       class="px-3 py-1 border border-green-500 rounded-full text-green-500 text-xs uppercase font-semibold"
                        style="font-size: 10px">{{ $ad->category->name }}</a>
 
 

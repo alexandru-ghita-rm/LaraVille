@@ -1,8 +1,8 @@
 @props(['categories'])
 
 <header class="max-w-xl mx-auto mt-10 text-center">
-    <h1 class="text-5xl font-black">
-        <span class="text-pink-500">Larra Ville</span> Properties
+    <h1 class="text-5xl font-black text-gray-600">
+        <span class="text-green-500">Larra Ville</span> Properties
     </h1>
 
     <h2 class="inline-flex mt-2">Laravel Real Estate Marketplace</h2>
