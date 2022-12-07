@@ -1,7 +1,9 @@
+<x-navbar></x-navbar>
 <x-layout>
- <div class="bg-gray-100 w-full lg:w-6/12 rounded-xl mx-auto my-5 px-4 py-6">
+ <div class="bg-gray-100 w-full lg:w-4/12 rounded-xl mx-auto my-10 px-4 py-6">
         <h1 class="text-center text-xl text-bold mb-5">Login</h1>
-        @if (session('status'))
+     <p class="text-center text-xs text-bold mb-5">No account? Click <a href="{{ route('register') }}" class="font-bold">here</a> to create a free account</p>
+ @if (session('status'))
             <div class="py-3 bg-red-300 rounded-lg mb-6 text-white text-center">
                 {{ session('status') }}
             </div>

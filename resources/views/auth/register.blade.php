@@ -1,7 +1,8 @@
 <x-navbar></x-navbar>
 <x-layout>
-    <div class="bg-gray-100 w-full lg:w-6/12 rounded-xl mx-auto my-5 px-4 py-6">
+    <div class="bg-gray-100 w-full lg:w-4/12 rounded-xl mx-auto my-10 px-4 py-6">
         <h1 class="text-center text-xl text-bold mb-5">Sign up</h1>
+        <p class="text-center text-xs text-bold mb-5">Create a free account and start posting listings</p>
         <form actions="{{ route('register') }}" method="post">
             @csrf
             <div class="mb-4">
@@ -68,5 +69,4 @@
             </div>
         </form>
     </div>
-    @endsection
 </x-layout>
