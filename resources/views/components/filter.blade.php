@@ -1,11 +1,11 @@
 <header class="text-center relative overflow-hidden">
     <img src="https://www.imobiliare.ro/imagini/rebranding/homepage/1-xl.jpg" class="object-cover w-full h-full">
     <div class="absolute w-full h-full top-0 flex flex-col justify-center inset-x-0">
-        <h1 class="text-5xl font-black text-gray-600">
+        <h1 class="text-5xl text-white font-black">
             <span class="text-green-500">Larra Ville</span> Properties
         </h1>
 
-        <h2 class="mt-2">Laravel Real Estate Marketplace</h2>
+        <h2 class="mt-2 text-white font-bold">Laravel Real Estate Marketplace</h2>
 
         <div class="space-y-2 lg:space-y-0 lg:space-x-4 mt-8">
             <!--  Category -->
