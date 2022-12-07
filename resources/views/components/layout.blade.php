@@ -8,8 +8,6 @@
 <script src="//unpkg.com/alpinejs" defer></script>
 
 <body style="font-family: 'Manrope', sans-serif;">
-<x-navbar></x-navbar>
-<x-filter></x-filter>
 {{ $slot }}
 <x-footer></x-footer>
 </body>

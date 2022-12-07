@@ -1,7 +1,5 @@
-@extends('layout')
-
-@section('content')
-    @include('navigation')
+<x-navbar></x-navbar>
+<x-layout>
     <div class="bg-gray-100 w-full lg:w-6/12 rounded-xl mx-auto my-5 px-4 py-6">
         <h1 class="text-center text-xl text-bold mb-5">Sign up</h1>
         <form actions="{{ route('register') }}" method="post">
@@ -20,7 +18,8 @@
             <div class="mb-4">
                 <label for="username" class="sr-only">Username</label>
                 <input type="text" name="username" placeholder="Your username"
-                       class="bg-gray-100 border-2 @error('username') border-red-700 @enderror p-4 rounded-lg w-full" value="{{ old('username') }}">
+                       class="bg-gray-100 border-2 @error('username') border-red-700 @enderror p-4 rounded-lg w-full"
+                       value="{{ old('username') }}">
                 @error('username')
                 <div class="text-sm text-red-700 mt-2">
                     {{ $message }}
@@ -30,7 +29,8 @@
             <div class="mb-4">
                 <label for="email" class="sr-only">Email</label>
                 <input type="email" name="email" placeholder="Your email"
-                       class="bg-gray-100 border-2 @error('email') border-red-700 @enderror p-4 rounded-lg w-full" value="{{ old('email') }}">
+                       class="bg-gray-100 border-2 @error('email') border-red-700 @enderror p-4 rounded-lg w-full"
+                       value="{{ old('email') }}">
                 @error('email')
                 <div class="text-sm text-red-700 mt-2">
                     {{ $message }}
@@ -41,7 +41,8 @@
             <div class="mb-4">
                 <label for="password" class="sr-only">Password</label>
                 <input type="password" name="password" placeholder="Choose a password"
-                       class="bg-gray-100 border-2 @error('password') border-red-700 @enderror p-4 rounded-lg w-full" value="">
+                       class="bg-gray-100 border-2 @error('password') border-red-700 @enderror p-4 rounded-lg w-full"
+                       value="">
                 @error('password')
                 <div class="text-sm text-red-700 mt-2">
                     {{ $message }}
@@ -51,7 +52,8 @@
             <div class="mb-4">
                 <label for="password_confirmation" class="sr-only">Password again</label>
                 <input type="password" name="password_confirmation" placeholder="Type password again"
-                       class="bg-gray-100 border-2 @error('password') border-red-700 @enderror p-4 rounded-lg w-full" value="">
+                       class="bg-gray-100 border-2 @error('password') border-red-700 @enderror p-4 rounded-lg w-full"
+                       value="">
                 @error('password')
                 <div class="text-sm text-red-700 mt-2">
                     {{ $message }}
@@ -66,4 +68,5 @@
             </div>
         </form>
     </div>
-@endsection
+    @endsection
+</x-layout>

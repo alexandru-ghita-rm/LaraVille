@@ -1,6 +1,6 @@
 <header class="text-center relative overflow-hidden">
-    <img src="https://www.imobiliare.ro/imagini/rebranding/homepage/1-xl.jpg" class="object-cover w-full h-full">
-    <div class="absolute w-full h-full top-0 flex flex-col justify-center inset-x-0">
+    <img src="https://www.imobiliare.ro/imagini/rebranding/homepage/1-xl.jpg" class="object-cover w-full h-100">
+    <div class="absolute w-full h-100 top-0 flex flex-col justify-center inset-x-0">
         <h1 class="text-5xl font-black text-gray-600">
             <span class="text-green-500">Larra Ville</span> Properties
         </h1>
