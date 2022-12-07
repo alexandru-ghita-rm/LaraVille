@@ -1,5 +1,5 @@
+
 <x-layout>
-    @include('_navigation')
     <section class="px-6 py-4">
         <main class="max-w-6xl mx-auto mt-10 lg:mt-20 space-y-6">
             <a href="/"
@@ -23,7 +23,7 @@
                 <div class="col-span-8">
                     <div class="hidden lg:flex justify-between mb-6">
                         <div class="space-x-2">
-                            <x-category-button :category="$ad->category" />
+                            <x-category-button :category="$ad->category"/>
                         </div>
                     </div>
 

@@ -22,7 +22,11 @@
 
         @auth
             <div class="mr-6 md:mt-0">
-                <a href="{{ route('my-account') }}" class="text-xs font-bold uppercase">{{ auth()->user()->name }}</a>
+                <a href="{{ route('my-account') }}"
+                   class="text-xs font-bold uppercase">{{ auth()->user()->name }}</a>
+            </div>
+            <div class="mr-6 md:mt-0">
+                <a href="board" class="text-xs font-bold uppercase">[+ Add]</a>
             </div>
             <div class="mr-6 md:mt-0">
                 <form action="{{ route('logout') }}" method="post">
