@@ -1,13 +1,10 @@
-@props(['ad'])
-
 <article
     class="transition-colors duration-300 bg-gray-100 border border-black border-opacity-0 hover:border-opacity-5 rounded-xl">
     <div class="lg:flex">
         <div class="flex-1 flex flex-col justify-between">
             <header class="mt-8 lg:mt-0 px-5">
                 <div class="space-x-2 pt-5">
-                    <span href="#"
-                          class="px-3 py-1 border bg-green-500 border-green-500 rounded-full text-white text-xs uppercase font-semibold"
+                    <span class="px-3 py-1 border bg-green-500 border-green-500 rounded-full text-white text-xs uppercase font-semibold"
                           style="font-size: 10px">LATEST AD</span>
                     <a href="/categories/{{ $ad->category->slug }}"
                        class="px-3 py-1 border border-green-500 rounded-full text-green-500 text-xs uppercase font-semibold"

@@ -8,11 +8,8 @@
 <script src="//unpkg.com/alpinejs" defer></script>
 
 <body style="font-family: 'Manrope', sans-serif;">
-<section>
-
-    @yield('content')
-    <footer class="bg-gray-300 text-center py-16 px-10 mt-16">
-        <h5 class="text-3xl">TODO FOOTER</h5>
-    </footer>
-</section>
+<x-navbar></x-navbar>
+<x-filter></x-filter>
+{{ $slot }}
+<x-footer></x-footer>
 </body>
