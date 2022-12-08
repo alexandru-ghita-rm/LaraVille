@@ -1,7 +1,8 @@
+<x-navbar></x-navbar>
 <x-layout>
     <section class="px-6 py-4">
         <main class="max-w-6xl mx-auto mt-10 lg:mt-20 space-y-6">
-            <a href="/"
+            <a href="{{ route('home') }}"
                class="transition-colors duration-300 relative inline-flex items-center text-lg hover:text-pink-500">
                 <svg width="22" height="22" viewBox="0 0 22 22" class="mr-2">
                     <g fill="none" fill-rule="evenodd">

@@ -28,6 +28,17 @@
                 @enderror
             </div>
             <div class="mb-4">
+                <label for="username" class="sr-only">Telephone</label>
+                <input type="text" name="telephone" placeholder="Your phone number"
+                       class="bg-gray-100 border-2 @error('username') border-red-700 @enderror p-4 rounded-lg w-full"
+                       value="{{ old('telephone') }}">
+                @error('telephone')
+                <div class="text-sm text-red-700 mt-2">
+                    {{ $message }}
+                </div>
+                @enderror
+            </div>
+            <div class="mb-4">
                 <label for="email" class="sr-only">Email</label>
                 <input type="email" name="email" placeholder="Your email"
                        class="bg-gray-100 border-2 @error('email') border-red-700 @enderror p-4 rounded-lg w-full"
