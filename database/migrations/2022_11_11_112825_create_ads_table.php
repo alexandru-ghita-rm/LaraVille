@@ -15,12 +15,13 @@ return new class extends Migration
     {
         Schema::create('ads', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id');
-            $table->foreignId('category_id');
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('category_id');
             $table->string('slug')->unique();
             $table->string('title');
             $table->text('summary');
             $table->text('body');
+            $table->integer('price');
             $table->timestamps();
             $table->timestamp('published_at')->nullable();
         });

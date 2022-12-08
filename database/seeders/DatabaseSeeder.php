@@ -41,6 +41,15 @@ class DatabaseSeeder extends Seeder
             'slug' => 'land'
         ]);
 
+        User::create([
+            'user_id' => $user->id,
+            'name' => 'Alex',
+            'username' => 'Alexinho',
+            'telephone' => '0723360305',
+            'email' => 'alex@mainesia.com',
+            'password' => '1234',
+        ]);
+
         Ad::create([
             'user_id' => $user->id,
             'category_id' => $apartments->id,

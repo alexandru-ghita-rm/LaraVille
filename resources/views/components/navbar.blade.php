@@ -26,7 +26,7 @@
                    class="text-xs font-bold uppercase">{{ auth()->user()->name }}</a>
             </div>
             <div class="mr-6 md:mt-0">
-                <a href="board" class="text-xs font-bold uppercase">[+ Add]</a>
+                <a href="{{ route('add-listing') }}" class="text-xs font-bold uppercase">[+ Add]</a>
             </div>
             <div class="mr-6 md:mt-0">
                 <form action="{{ route('logout') }}" method="post" class="mb-0">

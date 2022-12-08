@@ -25,6 +25,7 @@ class AdFactory extends Factory
             'slug'=>$this->faker->slug,
             'summary'=> $this->faker->sentence,
             'body'=> $this->faker->paragraph,
+            'price'=> $this->faker->paragraph,
         ];
     }
 }

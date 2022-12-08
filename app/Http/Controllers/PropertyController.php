@@ -11,7 +11,6 @@ class PropertyController extends Controller
     public function show(Ad $ad) {
         return view('ad', [
             'ad' => $ad,
-            'categories' => Category::all()
         ]);
     }
 }

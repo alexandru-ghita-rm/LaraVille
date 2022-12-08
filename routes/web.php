@@ -47,4 +47,5 @@ Route::get('login', [LoginController::class, 'index'])->name('login');
 Route::post('login', [LoginController::class, 'store']);
 Route::get('dashboard', [DashboardController::class, 'index'])->name('my-account');
 Route::get('about', [AboutController::class, 'index'])->name('about');
-Route::get('add-listing', [ListController::class, 'index'])->name('add');
+Route::get('add-listing', [ListController::class, 'index'])->name('add-listing');
+Route::post('add-listing', [ListController::class, 'store']);
