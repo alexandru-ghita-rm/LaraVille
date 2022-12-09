@@ -14,6 +14,7 @@ class AdController extends Controller
         if (request('search')) {
             $ads
                 ->where('title', 'like', '%' . request('search') . '%')
+                ->orWhere('summary', 'like', '%' . request('search') . '%')
                 ->orWhere('body', 'like', '%' . request('search') . '%');
         };
 
