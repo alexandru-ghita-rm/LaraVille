@@ -59,7 +59,7 @@
                     <div class="space-y-4 lg:text-lg leading-loose mb-4 font-bold text-gray-500">
                         Price: {{ $ad->price }} €
                     </div>
-
+                    <h3 class="mb-2 font-bold text-gray-700">Description</h3>
                     <div class="space-y-4 lg:text-lg leading-loose">
                         <p>{{ $ad->body }}</p>
 
