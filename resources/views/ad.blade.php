@@ -26,7 +26,7 @@
             </div>
             <article class="max-w-6xl mx-auto lg:grid lg:grid-cols-12 gap-x-10">
                 <div class="col-span-8">
-                    <img src="/images/illustration-1.png" alt="" class="rounded-lg object-cover" height="200">
+                    <img src="/images/no-image.png" alt="" class="rounded-lg object-cover" height="200">
                 </div>
                 <div class="col-span-4 flex flex-col items-center rounded-lg bg-gray-200 p-20 text-center">
                     <img src="/images/avatar.png" alt="avatar" class="w-32 rounded-full">

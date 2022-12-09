@@ -50,7 +50,7 @@
         <div class="flex-1 lg:ml-8">
             <p class="absolute bg-green-500 text-white mt-5 ml-5 py-2 px-5 rounded-xl">Price: {{ $ad->price }} €</p>
 
-            <img src="{{ URL::to('/') }}/images/illustration-1.png" alt="" class="rounded-r-xl">
+            <img src="{{ URL::to('/') }}/images/no-image.png" alt="" class="rounded-r-xl">
         </div>
     </div>
 </article>

@@ -27,11 +27,10 @@
             {{ auth()->user()->name }}!
         </span>
         <a href="/add" class="bg-green-500 rounded-lg text-white text-xxl p-3 block text-center mb-3">Add a listing</a>
-    <h2 class="text-xl text-bold mb-5">My listings</h2>
-        @if (false)
-            {{--            <x-featured-ad-card :ad="$ads[0]"/>--}}
+        @if (count(auth()->user()->ads) >= 1)
+            <x-selling />
         @else
-            <p class="text-center">No listings added yet :(</p>
+            <p class="text-center">No listings to match your search :(</p>
         @endif
     </div>
 </x-layout>
