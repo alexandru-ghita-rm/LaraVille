@@ -3,7 +3,7 @@
 <x-layout>
     <div class="bg-gray-100 w-full lg:w-6/12 rounded-xl mx-auto my-5 px-4 py-6">
         <h1 class="text-xl text-bold mb-5">Add Listing</h1>
-        <form actions="{{ route('add-listing') }}" method="post">
+        <form actions="{{ route('add-listing') }}" method="post" enctype="multipart/form-data">
             @csrf
             <input type="number" value="{{ auth()->user()->id }}" name="user_id" class="hidden">
             <p class="text-xs mb-2">My listing belongs in: </p>
@@ -60,6 +60,15 @@
                 <div class="text-sm text-red-700 mt-2">
                     {{ $message }}
                 </div>
+                @enderror
+            </div>
+            <div class="mb-4">
+                <label class="block mb-4">
+                    <span class="sr-only">Choose File</span>
+                    <input type="file" name="image"
+                           class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"/>
+                    @error('image')
+                    <span class="text-red-600 text-sm">{{ $message }}</span>
                 @enderror
             </div>
             <div class="mb-4">

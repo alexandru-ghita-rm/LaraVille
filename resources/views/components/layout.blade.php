@@ -7,6 +7,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
 <script src="//unpkg.com/alpinejs" defer></script>
 
+@vite('resources/js/app.js')
+
 <body style="font-family: 'Manrope', sans-serif;">
 {{ $slot }}
 <x-footer></x-footer>

@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Ad extends Model
 {
     use HasFactory;
-    protected $fillable = ['title' , 'summary', 'body', 'category_id' , 'price', 'user_id', 'slug'];
+    protected $fillable = ['title' , 'summary', 'body', 'category_id' , 'price', 'user_id', 'slug' , 'image'];
     protected $with = ['category'];
 
     public function category() {

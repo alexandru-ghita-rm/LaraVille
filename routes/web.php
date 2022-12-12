@@ -7,6 +7,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ImageController;
 use App\Http\Controllers\ListController;
 use App\Http\Controllers\PostPropertyController;
 use App\Http\Controllers\PropertyController;
@@ -49,3 +50,4 @@ Route::get('dashboard', [DashboardController::class, 'index'])->name('my-account
 Route::get('about', [AboutController::class, 'index'])->name('about');
 Route::get('add-listing', [ListController::class, 'index'])->name('add-listing');
 Route::post('add-listing', [ListController::class, 'store']);
+

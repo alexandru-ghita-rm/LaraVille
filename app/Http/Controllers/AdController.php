@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 class AdController extends Controller
 {
     public function index() {
+
         $ads = Ad::latest();
 
         if (request('search')) {
@@ -19,7 +20,7 @@ class AdController extends Controller
         };
 
         return view('ads', [
-            'ads' => $ads->get(),
+            'ads' => $ads->paginate(10),
             'categories' => Category::all()
         ]);
     }

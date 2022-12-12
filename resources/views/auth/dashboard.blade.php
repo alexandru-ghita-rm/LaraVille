@@ -26,7 +26,7 @@
         ?>
             {{ auth()->user()->name }}!
         </span>
-        <a href="/add" class="bg-green-500 rounded-lg text-white text-xxl p-3 block text-center mb-3">Add a listing</a>
+        <a href="{{ route('add-listing') }}" class="bg-green-500 rounded-lg text-white text-xxl p-3 block text-center mb-3">Add a listing</a>
         @if (count(auth()->user()->ads) >= 1)
             <x-selling />
         @else

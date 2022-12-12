@@ -22,8 +22,9 @@ class Selling extends Component
     public function render()
     {
         return view('components.selling', [
-            'ads' => Ad::all(),
-            'seller_ads' => Auth::user()->ads()->get()
+           'ads' => Ad::all(),
+           'seller_ads' => Auth::user()->ads()->orderBy('created_at', 'desc' )->paginate(3),
+           'seller_ads_total' => Auth::user()->ads()->get()
         ]);
     }
 }
