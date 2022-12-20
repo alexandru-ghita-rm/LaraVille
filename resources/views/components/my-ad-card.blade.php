@@ -1,6 +1,6 @@
 <article
-    {{ $attributes->merge(['class' => 'transition-colors duration-300 bg-stone-300 border border-black border-opacity-0 hover:border-opacity-5 rounded-xl']) }}>
-    <div class="bg-gray-100 rounded-xl">
+    {{ $attributes->merge(['class' => 'transition-colors duration-300 bg-white border border-black border-opacity-0 hover:border-opacity-5 rounded-xl']) }}>
+    <div class="bg-white-100 rounded-xl">
         <div class="flex bg-gray-300 rounded-t-xl h-40 items-center justify-center">
             @if ($ad->image)
                 <img src="{{ URL::to('/') }}/storage/app/public/{{ $ad->image }}" class="rounded-xl">
@@ -29,9 +29,9 @@
             </div>
 
             <div>
-                <a href="/ads/{{ $ad->slug }}"
+                <a href="#"
                    class="transition-colors duration-300 text-xs font-semibold bg-gray-200 hover:bg-gray-300 rounded-full py-2 px-8"
-                >Details</a>
+                >Delete</a>
             </div>
         </footer>
     </div>

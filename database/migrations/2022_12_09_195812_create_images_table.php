@@ -13,18 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('ads', function (Blueprint $table) {
+        Schema::create('images', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('category_id');
-            $table->string('slug')->unique();
             $table->string('image');
-            $table->string('title');
-            $table->text('summary');
-            $table->text('body');
-            $table->integer('price');
             $table->timestamps();
-            $table->timestamp('published_at')->nullable();
         });
     }
 
@@ -35,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ads');
+        Schema::dropIfExists('images');
     }
 };

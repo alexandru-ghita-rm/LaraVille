@@ -7,6 +7,8 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ImageController;
+use App\Http\Controllers\ListController;
 use App\Http\Controllers\PostPropertyController;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\RegisterController;
@@ -39,13 +41,13 @@ Route::get('sellers/{seller:username}', function (User $seller) {
     ]);
 });
 
-Route::get('about', [AboutController::class, 'index'])->name('about');
 Route::get('sign-up', [RegisterController::class, 'index'])->name('register');
 Route::post('sign-up', [RegisterController::class, 'store']);
-Route::get('bed', [PostPropertyController::class, 'index'])->name('add-listing');
 Route::post('logout', [LogoutController::class, 'store'])->name('logout');
 Route::get('login', [LoginController::class, 'index'])->name('login');
 Route::post('login', [LoginController::class, 'store']);
 Route::get('dashboard', [DashboardController::class, 'index'])->name('my-account');
-
+Route::get('about', [AboutController::class, 'index'])->name('about');
+Route::get('add-listing', [ListController::class, 'index'])->name('add-listing');
+Route::post('add-listing', [ListController::class, 'store']);
 

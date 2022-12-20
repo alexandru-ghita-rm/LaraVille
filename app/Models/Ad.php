@@ -8,8 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Ad extends Model
 {
     use HasFactory;
-    protected $fillable = ['title' , 'summary', 'body'];
-    protected $with = ['category' , 'seller'];
+    protected $fillable = ['title' , 'summary', 'body', 'category_id' , 'price', 'user_id', 'slug' , 'image'];
+    protected $with = ['category'];
 
     public function category() {
         return $this->belongsTo(Category::class);

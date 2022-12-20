@@ -1,7 +1,8 @@
 <x-navbar></x-navbar>
 <x-layout>
-    <div class="bg-gray-100 w-full lg:w-6/12 rounded-xl mx-auto my-5 px-4 py-6">
+    <div class="bg-gray-100 w-full lg:w-4/12 rounded-xl mx-auto my-10 px-4 py-6">
         <h1 class="text-center text-xl text-bold mb-5">Sign up</h1>
+        <p class="text-center text-xs text-bold mb-5">Create a free account and start posting listings</p>
         <form actions="{{ route('register') }}" method="post">
             @csrf
             <div class="mb-4">
@@ -21,6 +22,17 @@
                        class="bg-gray-100 border-2 @error('username') border-red-700 @enderror p-4 rounded-lg w-full"
                        value="{{ old('username') }}">
                 @error('username')
+                <div class="text-sm text-red-700 mt-2">
+                    {{ $message }}
+                </div>
+                @enderror
+            </div>
+            <div class="mb-4">
+                <label for="username" class="sr-only">Telephone</label>
+                <input type="text" name="telephone" placeholder="Your phone number"
+                       class="bg-gray-100 border-2 @error('username') border-red-700 @enderror p-4 rounded-lg w-full"
+                       value="{{ old('telephone') }}">
+                @error('telephone')
                 <div class="text-sm text-red-700 mt-2">
                     {{ $message }}
                 </div>
@@ -68,5 +80,4 @@
             </div>
         </form>
     </div>
-    @endsection
 </x-layout>

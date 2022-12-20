@@ -17,7 +17,7 @@
         @endforeach
 
         <div class="mr-6 md:mt-0">
-            <a href="/about" class="text-xs font-bold uppercase">About Larra Ville</a>
+            <a href="{{ route('about') }}" class="text-xs font-bold uppercase">About Larra Ville</a>
         </div>
 
         @auth
@@ -26,10 +26,10 @@
                    class="text-xs font-bold uppercase">{{ auth()->user()->name }}</a>
             </div>
             <div class="mr-6 md:mt-0">
-                <a href="board" class="text-xs font-bold uppercase">[+ Add]</a>
+                <a href="{{ route('add-listing') }}" class="text-xs font-bold uppercase">[+ Add]</a>
             </div>
             <div class="mr-6 md:mt-0">
-                <form action="{{ route('logout') }}" method="post">
+                <form action="{{ route('logout') }}" method="post" class="mb-0">
                     @csrf
                     <button type="submit" class="text-xs font-bold uppercase">Logout</button>
                 </form>
